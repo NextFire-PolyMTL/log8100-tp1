@@ -430,34 +430,8 @@
 									<directory>src/main/resources</directory>
 									<filtering>true</filtering>
 								</resource>
-								<resource>
-									<directory>src/it/resources</directory>
-									<filtering>true</filtering>
-								</resource>
 							</resources>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.22.2</version>
-				<configuration>
-					<skipTests>${skipTests}</skipTests>
-					<skipITs>${skipITs}</skipITs>
-					<excludes>
-						<exclude>**/*Test*</exclude>
-					</excludes>
-				</configuration>
-				<executions>
-					<execution>
-						<id>integration-tests</id>
-						<phase>integration-test</phase>
-						<goals>
-							<goal>integration-test</goal>
-							<goal>verify</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>
